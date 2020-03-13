@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>PUSHCODE Test Page</title>
+    <script src="https://bpadmin.test.edocode.co.jp/dist/js/pushcode.js"></script>
+    <script>
+    (function () {
+        document.addEventListener('DOMContentLoaded', function () {
+            if (PushCode.isSupport()) {
+                PushCode.init({ domainToken: '3077f1f12935c0b6e5baf0eca41dc410e0858da00d78a014de122570cee9c425', userid: '' });
+                var button = document.getElementsByClassName('pushcode-handler');
+                for (var i = 0; i < button.length; i++) {
+                    button[i].addEventListener('click', function () {
+                        PushCode.requestPermission();
+                    });
+                }
+            }
+        });
+    })();
+    </script>
+</head>
+<body>
+    <h1>PUSHCODE Test Page</h1>
+    <button type="button" class="pushcode-handler">クリック</button>
+</body>
+</html>
