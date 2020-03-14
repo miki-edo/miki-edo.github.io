@@ -7,7 +7,7 @@ class PushCodeSw {
     }
 
     static baseUrl() {
-        return "https://pushcode-test.pushcode.jp/browser/api/v1";
+        return "http://localhost:30080/browser/api/v1";
     }
 
     static toSnakeCase(s) {
